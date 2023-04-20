@@ -10,8 +10,6 @@ Original file is located at
 import streamlit as st
 import pandas as pd
 import shap
-import matplotlib
-import matplotlib.pyplot as plt
 import sklearn
 from sklearn import datasets
 from sklearn.ensemble import RandomForestRegressor
@@ -90,12 +88,12 @@ explainer = shap.TreeExplainer(model)
 shap_values = explainer.shap_values(X)
 
 st.header('Feature Importance')
-plt.title('Feature importance based on SHAP values')
+st.write('Feature importance based on SHAP values')
 shap.summary_plot(shap_values, X)
 st.pyplot(bbox_inches='tight')
 st.write('---')
 
-plt.title('Feature importance based on SHAP values (Bar)')
+st.write('Feature importance based on SHAP values (Bar)')
 shap.summary_plot(shap_values, X, plot_type="bar")
 st.pyplot(bbox_inches='tight')
 
