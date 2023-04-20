@@ -11,17 +11,17 @@ import streamlit as st
 import pandas as pd
 import shap
 import sklearn
-from sklearn import datasets
+#from sklearn import datasets
 from sklearn.ensemble import RandomForestRegressor
 
 st.write("""
 # Boston House Price Prediction App
-This app predicts the **Boston House Price**!
+This app predicts the **Boston House Price**
 """)
 st.write('---')
 
 # Loads the Boston House Price Dataset
-boston = datasets.load_boston()
+boston = pd.read_csv('Boston_housing_data.csv')
 X = pd.DataFrame(boston.data, columns=boston.feature_names)
 Y = pd.DataFrame(boston.target, columns=["MEDV"])
 
