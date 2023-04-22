@@ -22,8 +22,9 @@ st.write('---')
 
 # Loads the Boston House Price Dataset
 boston = pd.read_csv('Boston_housing_data.csv')
-X = pd.DataFrame(boston.iloc[:-1])
-Y = pd.DataFrame(boston.iloc[-1])
+X = pd.DataFrame(boston[['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX',
+       'PTRATIO', 'B', 'LSTAT']])
+Y = pd.DataFrame(boston['MDEV'])
 
 # Sidebar
 # Header of Specify Input Parameters
