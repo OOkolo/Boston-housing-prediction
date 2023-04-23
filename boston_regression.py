@@ -80,7 +80,7 @@ model.fit(X, Y)
 prediction = model.predict(df)
 
 
-st.header('Prediction of Home price Median')
+st.header('Prediction of Home price Median in $1000s')
 st.write(prediction)
 st.write('---')
 
