@@ -20,6 +20,10 @@ This app predicts the **Boston House Price**
 """)
 st.write('---')
 
+#Hide any warnings
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
+
 # Loads the Boston House Price Dataset
 boston = pd.read_csv('Boston_housing_data.csv')
 boston = boston.astype(float)
