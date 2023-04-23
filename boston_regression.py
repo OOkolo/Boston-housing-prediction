@@ -92,7 +92,7 @@ st.write('---')
 # https://github.com/slundberg/shap
 explainer = shap.TreeExplainer(model)
 shap_values = explainer.shap_values(X)
-st.image('data_dictionary_image.png')
+
 st.header('Feature Importance')
 st.write('Feature importance based on SHAP values')
 shap.summary_plot(shap_values, X)
