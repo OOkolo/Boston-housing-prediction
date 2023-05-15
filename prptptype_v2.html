@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sliders and Textboxes</title>
+	<style>
+		.sidebar {
+			background-color: #f1f1f1;
+			padding: 20px;
+			width: 25%;
+			float: left;
+		}
+
+		.main {
+			padding: 20px;
+			width: 75%;
+			float: left;
+		}
+
+		.slider {
+			-webkit-appearance: none;
+			width: 100%;
+			height: 10px;
+			border-radius: 5px;
+			background: #d3d3d3;
+			outline: none;
+			opacity: 0.7;
+			-webkit-transition: .2s;
+			transition: opacity .2s;
+			margin-bottom: 10px;
+		}
+
+		.slider:hover {
+			opacity: 1;
+		}
+
+		.slider::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background: #4caf50;
+			cursor: pointer;
+		}
+
+		.slider::-moz-range-thumb {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background: #4caf50;
+			cursor: pointer;
+		}
+
+		.textbox {
+			padding: 5px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+			border: 1px solid #d3d3d3;
+			width: 100%;
+			box-sizing: border-box;
+			font-size: 16px;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="sidebar">
+		<h3>Sliders</h3>
+		<label for="slider1">Slider 1</label>
+		<input type="range" min="0" max="100" value="50" class="slider" id="slider1">
+
+		<label for="slider2">Slider 2</label>
+		<input type="range" min="0" max="100" value="50" class="slider" id="slider2">
+
+		<label for="slider3">Slider 3</label>
+		<input type="range" min="0" max="100" value="50" class="slider" id="slider3">
+
+		<h3>Textboxes</h3>
+		<label for="textbox1">Textbox 1</label>
+		<input type="text" class="textbox" id="textbox1">
+
+		<label for="textbox2">Textbox 2</label>
+		<input type="text" class="textbox" id="textbox2">
+
+		<label for="textbox3">Textbox 3</label>
+		<input type="text" class="textbox" id="textbox3">
+	</div>
+
+	<div class="main">
+		<h1>Sliders and Textboxes</h1>
+		<p>This is an example HTML page with sliders and textboxes.</p>
+	</div>
+
+</body>
+</html>
