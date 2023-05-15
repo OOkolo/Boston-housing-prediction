@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sliders and Text Boxes</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		/* Styling for the sidebar */
+		.sidebar {
+			height: 100%;
+			width: 200px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: #f1f1f1;
+			overflow-x: hidden;
+			padding-top: 20px;
+		}
+
+		/* Styling for the main content */
+		.main {
+			margin-left: 200px;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Sidebar with sliders -->
+	<div class="sidebar">
+		<h2>Sliders</h2>
+		<p>Select a number:</p>
+		<input type="range" id="numberSlider" min="1" max="100" value="50">
+		<p>Select a percentage:</p>
+		<input type="range" id="percentSlider" min="1" max="100" value="50">
+	</div>
+
+	<!-- Main content with text boxes -->
+	<div class="main">
+		<h1>Sliders and Text Boxes</h1>
+		<p>Number: <input type="text" id="numberBox" value="50"></p>
+		<p>Percentage: <input type="text" id="percentBox" value="50"></p>
+	</div>
+
+	<!-- Script to update text boxes when sliders are moved -->
+	<script>
+		var numberSlider = document.getElementById("numberSlider");
+		var percentSlider = document.getElementById("percentSlider");
+		var numberBox = document.getElementById("numberBox");
+		var percentBox = document.getElementById("percentBox");
+
+		numberSlider.oninput = function() {
+			numberBox.value = this.value;
+		}
+
+		percentSlider.oninput = function() {
+			percentBox.value = this.value;
+		}
+	</script>
+
+</body>
+</html>
